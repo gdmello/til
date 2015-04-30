@@ -11,10 +11,7 @@ func Run(args []string) int {
 	c := cli.NewCLI("til", Version)
 	c.Args = args
 
-	// c.Commands = map[string]cli.CommandFactory{
-	//     "foo": fooCommandFactory,
-	//     "bar": barCommandFactory,
-	// }
+	c.Commands = Commands()
 
 	exitStatus, err := c.Run()
 	if err != nil {
