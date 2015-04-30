@@ -1,5 +1,24 @@
 {
 	"ImportPath": "github.com/kevinjqiu/til",
 	"GoVersion": "go1.3.1",
-	"Deps": []
+	"Deps": [
+		{
+			"ImportPath": "github.com/mitchellh/cli",
+			"Rev": "6cc8bc522243675a2882b81662b0b0d2e04b99c9"
+		},
+		{
+			"ImportPath": "github.com/onsi/ginkgo",
+			"Comment": "v1.1.0-44-gae043a2",
+			"Rev": "ae043a2b2a91d6441adedc96d2c01958a78ee516"
+		},
+		{
+			"ImportPath": "github.com/onsi/gomega",
+			"Comment": "v1.0-43-gf4f1cae",
+			"Rev": "f4f1caefe95e396ea97b72dd6c52973ae4a6978c"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/ssh/terminal",
+			"Rev": "c84e1f8e3a7e322d497cd16c0e8a13c7e127baf3"
+		}
+	]
 }
