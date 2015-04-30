@@ -1,7 +1,8 @@
 package command
 
-import "fmt"
+type InitCommand struct {
+}
 
-func InitCommand() {
-	fmt.Println("init")
+func (c *InitCommand) Run(args []string) int {
+	return 0
 }
