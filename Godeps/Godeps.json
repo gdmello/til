@@ -8,10 +8,6 @@
 			"Rev": "820deefc9031d101f085ef773425fc6ca7a5363e"
 		},
 		{
-			"ImportPath": "github.com/mitchellh/cli",
-			"Rev": "6cc8bc522243675a2882b81662b0b0d2e04b99c9"
-		},
-		{
 			"ImportPath": "github.com/onsi/ginkgo",
 			"Comment": "v1.1.0-44-gae043a2",
 			"Rev": "ae043a2b2a91d6441adedc96d2c01958a78ee516"
