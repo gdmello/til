@@ -1,22 +1,33 @@
 package cli
 
 import (
-	"log"
-	_ "os"
+	_ "log"
 
-	"github.com/mitchellh/cli"
+	"github.com/codegangsta/cli"
 )
 
-func Run(args []string) int {
-	c := cli.NewCLI("til", Version)
-	c.Args = args
-
-	c.Commands = Commands()
-
-	exitStatus, err := c.Run()
-	if err != nil {
-		log.Println(err)
+func Run(args []string) error {
+	app := cli.NewApp()
+	app.Name = "TIL"
+	app.Version = Version
+	app.Usage = "Manage your Today-I-Learned entries"
+	app.Commands = []cli.Command{
+		{
+			Name:   "init",
+			Usage:  "Initialize a TIL repo",
+			Action: InitCommand,
+		},
+		{
+			Name:   "new",
+			Usage:  "Create a new TIL entry",
+			Action: NewCommand,
+		},
+		{
+			Name:   "show",
+			Usage:  "Show existing TIL entries",
+			Action: ShowCommand,
+		},
 	}
 
-	return exitStatus
+	return app.Run(args)
 }
