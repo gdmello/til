@@ -13,6 +13,11 @@ func Run(args []string) error {
 	app.Usage = "Manage your Today-I-Learned entries"
 	app.Commands = []cli.Command{
 		{
+			Name:   "gencfg",
+			Usage:  "Generate a sample config",
+			Action: GenCfgCommand,
+		},
+		{
 			Name:   "init",
 			Usage:  "Initialize a TIL repo",
 			Action: InitCommand,
