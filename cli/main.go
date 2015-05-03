@@ -11,6 +11,18 @@ func Run(args []string) error {
 	app.Name = "TIL"
 	app.Version = Version
 	app.Usage = "Manage your Today-I-Learned entries"
+	app.Flags = []cli.Flag{
+		cli.StringFlag{
+			Name:  "config, c",
+			Usage: "Path to the config file. Default: $HOME/.tilrc.toml",
+			Value: "$HOME/.tilrc.toml",
+		},
+		cli.BoolTFlag{
+			Name:  "verbose",
+			Usage: "Verbose output",
+		},
+	}
+
 	app.Commands = []cli.Command{
 		{
 			Name:   "gencfg",
