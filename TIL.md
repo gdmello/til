@@ -8,6 +8,8 @@ tcpdump
 * `-n`, `-nn` - don't resolve hostname/port names
 * `-X` show packet's contents in hex and ascii
 * `-v`, `-vv`, `-vvv`
+* `-l` make stdout line buffered
+* `-A` print out ASCII
 
 ## filters
 
