@@ -50,3 +50,8 @@ Printer doesn't print after installing scanner driver
 =====================================================
 Brother 7060D stuck on "Waiting for printer to become available" after installing brscan4 (the scanner driver).  Because the scanner driver adds a udev rule so that the node is owned by the `scanner` group, which is no longer accessible by `lp`.  Temporary solution is to `chown root:lp /dev/usb/002/007/`, replace `002/007` with the actual location the use node is created. (Check `lsusb`)
 +printer
+
+Run browser that's spawned by selenium in the same desktop as the selenium terminal
+=================================================================================== 
+
+Xephyr :1 -ac -screen 1024x768 & sleep 2; DISPLAY=:1 urxvt
